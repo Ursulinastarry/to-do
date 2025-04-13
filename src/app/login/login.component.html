@@ -20,7 +20,13 @@
           Enter a valid email.
         </div>
       </div>
-
+      <div class="password">
+        <label>Password:</label>
+        <input type="password" formControlName="password">
+        <div class="name" *ngIf="jobForm.get('password')?.invalid && jobForm.get('password')?.touched">
+          Password must be at least 8 characters long..
+        </div>
+      </div>
     </div>
 
     <button type="submit" [disabled]="jobForm.invalid">Submit</button>
