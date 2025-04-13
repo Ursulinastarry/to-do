@@ -1,0 +1,19 @@
+<header class="header">
+    <nav class="nav">
+      <ul class="nav-list">
+        <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+        <li><a routerLink="/login" routerLinkActive="active">Log In</a></li>
+        <li><a routerLink="/responsive-cards" routerLinkActive="active">Cards</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle" (click)="toggleMenu()">
+      <span class="menu-icon"></span>
+    </button>
+  </header>
+  <div class="mobile-menu" [class.active]="isMenuOpen">
+    <ul class="mobile-nav-list">
+      <li><a routerLink="/" (click)="closeMenu()">Home</a></li>
+      <li><a routerLink="/login" (click)="closeMenu()">Log In</a></li>
+      <li><a routerLink="/responsive-cards" (click)="closeMenu()">Cards</a></li>
+    </ul>
+  </div>

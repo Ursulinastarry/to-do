@@ -1,0 +1,31 @@
+<div class="container">
+  <form [formGroup]="jobForm" (ngSubmit)="onSubmit()">
+    <!-- Name Field -->
+    <div class="name-married">
+      <div class="fullname">
+        <label>Full Name:</label>
+        <input type="text" formControlName="fullName">
+        <div class="name" *ngIf="jobForm.get('fullName')?.invalid && jobForm.get('fullName')?.touched">
+          Name is required and must be at least 3 characters long.
+        </div>
+        <div class="name" *ngIf="jobForm.get('fullName')?.hasError('nameTaken')">
+          This name is already taken.
+        </div>
+      </div>
+      <!-- Email Field -->
+      <div class="email">
+        <label>Email:</label>
+        <input type="email" formControlName="email">
+        <div class="name" *ngIf="jobForm.get('email')?.invalid && jobForm.get('email')?.touched">
+          Enter a valid email.
+        </div>
+      </div>
+
+    </div>
+
+    <button type="submit" [disabled]="jobForm.invalid">Submit</button>
+
+  </form>
+</div>
+
+<router-outlet></router-outlet>

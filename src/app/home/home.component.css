@@ -1,0 +1,122 @@
+/* Container Styling */
+.container {
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  background-color: #fff0f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 80vw;
+}
+
+/* Headings */
+h1 {
+  font-size: 1.8rem;
+  text-align: center;
+  color: #d63384;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+/* Task Input Section */
+.task-input form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.task-input input[type="text"],
+.task-input input[type="date"] {
+  padding: 0.6rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.task-input button {
+  padding: 0.5rem 1rem;
+  background-color: #d63384;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.task-input button:hover {
+  background-color: #c2185b;
+}
+
+/* Task List */
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Done/Undo Button */
+button.done {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 0.4rem 0.7rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button.done:hover {
+  background-color: #388e3c;
+}
+
+/* Text Line-through When Done */
+.text-decoration-line-through {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* Edit & Delete Buttons */
+button.btn-danger {
+  background-color: #ff6b6b;
+  border: none;
+  color: white;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+button.btn-danger:hover {
+  background-color: #e53935;
+}
+
+/* Responsive Styling */
+@media (max-width: 600px) {
+  .task-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .task-input form {
+    gap: 0.5rem;
+  }
+}
