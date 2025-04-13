@@ -23,6 +23,10 @@ export class LoginComponent {
     this.jobForm = this.fb.group({
       fullName: ['', [Validators.required], [this.nameValidator.checkNameExists()]],
       email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(8)]],
+      confirmPassword: ['', [Validators.required, Validators.minLength(8)]],
+    
+
     });
   }
 
