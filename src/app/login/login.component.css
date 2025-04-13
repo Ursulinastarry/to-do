@@ -34,7 +34,8 @@ body {
     gap: 20px;
 }
 
-.fullname, .email {
+.fullname, .email, .password, .confirm-password {
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
 }
@@ -45,7 +46,7 @@ label {
     font-weight: 600;
 }
 
-input[type="text"], 
+input[type="text"], input[type="password"],
 input[type="email"] {
     width: 100%;
     padding: 12px;
@@ -55,7 +56,7 @@ input[type="email"] {
     transition: border-color 0.3s ease;
 }
 
-input[type="text"]:focus, 
+input[type="text"]:focus, input[type="password"]:focus,
 input[type="email"]:focus {
     outline: none;
     border-color: #4ad0ff;
