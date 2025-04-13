@@ -12,9 +12,5 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'to-do';
-  constructor(private router: Router) {
-    this.router.events.subscribe(e => {
-      console.log('Routing event:', e);
-    });
-  }
+  
 }

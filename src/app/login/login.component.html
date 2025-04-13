@@ -8,9 +8,7 @@
         <div class="name" *ngIf="jobForm.get('fullName')?.invalid && jobForm.get('fullName')?.touched">
           Name is required and must be at least 3 characters long.
         </div>
-        <div class="name" *ngIf="jobForm.get('fullName')?.hasError('nameTaken')">
-          This name is already taken.
-        </div>
+        
       </div>
       <!-- Email Field -->
       <div class="email">
@@ -29,8 +27,7 @@
       </div>
     </div>
 
-    <button type="submit" [disabled]="jobForm.invalid">Submit</button>
-
+    <button type="button" (click)="onSubmit()">Submit</button>
   </form>
 </div>
 
